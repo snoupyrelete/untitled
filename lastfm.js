@@ -2,6 +2,10 @@
  * Created by Robson on 1/17/17.
  */
 
+
+
+
+
 Module.register("lastfm",{
     // Default module config.
     defaults: {
@@ -9,6 +13,20 @@ Module.register("lastfm",{
         animationSpeed: 1000,
         retryDelay: 2500,
         updateInterval: 10 * 60 * 1000,
+    },
+
+    start: function() {
+        Log.info("Starting module: " + this.name);
+
+        // Set locale.
+        //moment.locale(config.language);
+
+        this.songs = [];
+        this.loaded = false;
+        this.scheduleUpdate(this.config.initialLoadDelay);
+
+        this.updateTimer = null;
+
     },
 
     // Override dom generator.
@@ -31,11 +49,14 @@ Module.register("lastfm",{
         // readystate === 4 indicates done loading in ajax.js
         var fmRequest = new XMLHttpRequest();
         fmRequest.open("GET", url, true);
-        fmRequest.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
 
-                var songs = JSON.parse(this.response);
-                //    self.processSong(JSON.parse(this.response));
+        fmRequest.onreadystatechange = function() {
+            if (this.readyState === 4)
+            {
+                if (this.status === 200) {
+
+                    var songs = JSON.parse(this.response);
+                    //    self.processSong(JSON.parse(this.response));
                 } else if (this.status === 401) {
                     self.updateDom(self.config.animationSpeed);
 
@@ -44,6 +65,7 @@ Module.register("lastfm",{
                 } else {
                     Log.error(self.name + ": Could not load song.");
                 }
+            }
 
                 if (retry) {
                     self.scheduleUpdate((self.loaded) ? -1 : self.config.retryDelay);
