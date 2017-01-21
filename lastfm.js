@@ -21,7 +21,7 @@ Module.register("lastfm",{
         // Set locale.
         //moment.locale(config.language);
 
-        this.songs = [];
+        this.song = null;
         this.loaded = false;
         this.scheduleUpdate(this.config.initialLoadDelay);
 
@@ -54,8 +54,8 @@ Module.register("lastfm",{
             if (this.readyState === 4) {
                 if (this.status === 200) {
 
-                    var songs = JSON.parse(this.response);
-                    //    self.processSong(JSON.parse(this.response));
+                    //var songs = JSON.parse(this.response);
+                    self.processSong(JSON.parse(this.response));
                 } else if (this.status === 401) {
                     self.updateDom(self.config.animationSpeed);
 
