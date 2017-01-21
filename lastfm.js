@@ -38,7 +38,7 @@ Module.register("lastfm",{
 
     updateSong: function() {
         if (this.config.apikey === "") {
-            Log.error("WeatherForecast: APPID not set!");
+            Log.error("lastfm: apikey not set!");
             return;
         }
 
@@ -51,8 +51,7 @@ Module.register("lastfm",{
         fmRequest.open("GET", url, true);
 
         fmRequest.onreadystatechange = function() {
-            if (this.readyState === 4)
-            {
+            if (this.readyState === 4) {
                 if (this.status === 200) {
 
                     var songs = JSON.parse(this.response);
@@ -65,12 +64,12 @@ Module.register("lastfm",{
                 } else {
                     Log.error(self.name + ": Could not load song.");
                 }
-            }
+
 
                 if (retry) {
                     self.scheduleUpdate((self.loaded) ? -1 : self.config.retryDelay);
                 }
-
+            }
         };
         fmRequest.send();
     },
@@ -83,10 +82,10 @@ Module.register("lastfm",{
     processSong: function(data) {
         //this.fetchedLocatioName = data.city.name + ", " + data.city.country;
 
-        this.song = [];
+        //this.song = [];
         //for (var i = 0, count = data.list.length; i < count; i++) {
 
-            var song = data[0];
+            this.song = data.recenttracks[0];
             // this.forecast.push({
             //
             //     day: moment(forecast.dt, "X").format("ddd"),
