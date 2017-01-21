@@ -32,7 +32,7 @@ Module.register("lastfm",{
     // Override dom generator.
     getDom: function() {
         var wrapper = document.createElement("div");
-        wrapper.innerHTML = this.songs[0];
+        wrapper.innerHTML = this.songs[0].artist.text;
         return wrapper;
     },
 
