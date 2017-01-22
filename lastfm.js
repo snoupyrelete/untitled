@@ -13,6 +13,7 @@ Module.register("lastfm",{
         animationSpeed: 1000,
         retryDelay: 2500,
         updateInterval: 10 * 60 * 1000,
+        initialLoadDealy: 0
     },
 
     start: function() {
@@ -42,7 +43,7 @@ Module.register("lastfm",{
             return;
         }
 
-        var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rj&api_key=cd16a177cde26466eafa65f4353341a9&format=json";
+        var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=snoupyrelete&api_key=cd16a177cde26466eafa65f4353341a9@nowplaying=true&format=json";
         var self = this;
         var retry = true;
 
