@@ -85,19 +85,8 @@ Module.register("lastfm",{
         //this.song = [];
         //for (var i = 0, count = data.list.length; i < count; i++) {
 
-            this.song = data.recenttracks[0].name;
-            // this.forecast.push({
-            //
-            //     day: moment(forecast.dt, "X").format("ddd"),
-            //     icon: this.config.iconTable[forecast.weather[0].icon],
-            //     maxTemp: this.roundValue(forecast.temp.max),
-            //     minTemp: this.roundValue(forecast.temp.min),
-            //     rain: this.roundValue(forecast.rain)
-            //
-            // });
-       // }
+        this.song = data.recenttracks.track[0].name;
 
-        //Log.log(this.forecast);
         this.show(this.config.animationSpeed, {lockString:this.identifier});
         this.loaded = true;
         this.updateDom(this.config.animationSpeed);

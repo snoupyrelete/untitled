@@ -23,11 +23,21 @@
       <file leaf-file-name="lastfm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lastfm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="234">
+              <caret line="87" column="52" lean-forward="true" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HTML5.js" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -189,12 +199,12 @@
       <updated>1484711642199</updated>
       <workItem from="1484711643955" duration="5967000" />
       <workItem from="1485031970139" duration="3081000" />
-      <workItem from="1485042181679" duration="899000" />
+      <workItem from="1485042181679" duration="1367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9947000" />
+    <option name="totallyTimeSpent" value="10415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="6" />
@@ -266,10 +276,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lastfm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="234">
+          <caret line="87" column="52" lean-forward="true" selection-start-line="87" selection-start-column="52" selection-end-line="87" selection-end-column="52" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
