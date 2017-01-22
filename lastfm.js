@@ -32,7 +32,7 @@ Module.register("lastfm",{
     // Override dom generator.
     getDom: function() {
         var wrapper = document.createElement("div");
-        wrapper.innerHTML = this.songs[0].artist.text;
+        wrapper.innerHTML = this.song;
         return wrapper;
     },
 
@@ -85,7 +85,7 @@ Module.register("lastfm",{
         //this.song = [];
         //for (var i = 0, count = data.list.length; i < count; i++) {
 
-            this.song = data.recenttracks[0];
+            this.song = data.recenttracks[0].name;
             // this.forecast.push({
             //
             //     day: moment(forecast.dt, "X").format("ddd"),
